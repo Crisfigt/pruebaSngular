@@ -1,0 +1,22 @@
+<!--[formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" -->
+<div class="container">
+  <div class="card">
+    <h1>Formulario Component</h1>
+    <div class="formulario">
+      <label for="numero">Introduce un número:</label>
+      <br>
+      <div class="inputform">
+        <input #numero id="numero" >
+        <button class="btn" (click)="enviarNumero(numero.value)">Enviar</button>
+      </div>
+    </div>
+
+    <app-formula  [numeroRecibido]="numeroFormulario" (resultadoCalculado)="capturarResultado($event)"></app-formula>
+
+    <app-resultado  [resultado]="resultadoFormula"></app-resultado>
+  </div>
+
+</div>
+
+
+
